@@ -53,7 +53,7 @@ export class SurveyComponent {
   onSubmit(): void {
     this.isSubmitted = true;
 
-    this.http.post('http://localhost:3000/api/submit-survey', this.surveyData).subscribe({
+    this.http.post('http://localhost:3000/api/get-responses', this.surveyData).subscribe({
       next: () => {
         console.log('Survey submitted successfully.');
         this.errorMessage = '';
