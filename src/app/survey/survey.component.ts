@@ -52,8 +52,8 @@ export class SurveyComponent {
 
   onSubmit(): void {
     this.isSubmitted = true;
-
-    this.http.post('http://localhost:3000/api/get-responses', this.surveyData).subscribe({
+  
+    this.http.post('http://192.168.x.x:3000/api/get-responses', this.surveyData).subscribe({
       next: () => {
         console.log('Survey submitted successfully.');
         this.errorMessage = '';
@@ -65,9 +65,10 @@ export class SurveyComponent {
         this.isSubmitted = false;
       }
     });
-
+  
     console.log('Form submitted!', this.surveyData);
   }
+  
 
   resetForm(): void {
     this.surveyData = {
