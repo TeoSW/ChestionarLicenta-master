@@ -1,2 +1,1 @@
-ALTER TABLE survey
-MODIFY COLUMN metroStationsNumber VARCHAR(255);
+DELETE FROM survey;
