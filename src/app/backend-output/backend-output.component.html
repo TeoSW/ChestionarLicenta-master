@@ -1,0 +1,34 @@
+<div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+  
+  <div *ngIf="responses.length > 0; else noData">
+    <h2>Survey Responses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Education</th>
+          <th>Sector</th>
+          <!-- Add more headers as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let response of responses">
+          <td>{{ response.id }}</td>
+          <td>{{ response.age }}</td>
+          <td>{{ response.gender }}</td>
+          <td>{{ response.education }}</td>
+          <td>{{ response.sector }}</td>
+          <!-- Add more columns as needed -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #noData>
+    <p>No survey responses found.</p>
+  </ng-template>
+  
