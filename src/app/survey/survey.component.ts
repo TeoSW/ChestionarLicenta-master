@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-survey',
@@ -53,7 +52,7 @@ export class SurveyComponent {
   onSubmit(): void {
     this.isSubmitted = true;
   
-    this.http.post('http://192.168.x.x:3000/api/get-responses', this.surveyData).subscribe({
+    this.http.post('http://localhost:3000/api/submit-survey', this.surveyData).subscribe({
       next: () => {
         console.log('Survey submitted successfully.');
         this.errorMessage = '';
@@ -68,7 +67,6 @@ export class SurveyComponent {
   
     console.log('Form submitted!', this.surveyData);
   }
-  
 
   resetForm(): void {
     this.surveyData = {

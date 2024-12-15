@@ -1,1 +1,2 @@
-DELETE FROM survey;
+ALTER TABLE survey
+MODIFY COLUMN metroStationsNumber VARCHAR(255);

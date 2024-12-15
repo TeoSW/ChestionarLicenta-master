@@ -20,7 +20,7 @@ export class BackendOutputComponent implements OnInit {
   }
 
   fetchResponses(): void {
-    this.http.get('http://localhost:3000/api/get-responses').subscribe({
+    this.http.get('http://localhost:3000/api/submit-survey').subscribe({
       next: (response: any) => {
         console.log('Fetched survey responses:', response);
         this.responses = response.data;
