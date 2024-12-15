@@ -1,7 +1,6 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
-/dist
 /tmp
 /out-tsc
 /bazel-out
@@ -41,8 +40,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Ignore server.ts (add this line)
-server.ts
-
-# If server.ts is inside a specific folder (e.g., src/)
-# src/server.ts
+\server.ts
